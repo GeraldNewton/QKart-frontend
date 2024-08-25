@@ -1,0 +1,9 @@
+.foot {
+  height: 6.5rem;
+  padding: 0rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2.5rem;
+  font-weight: 600;
+}

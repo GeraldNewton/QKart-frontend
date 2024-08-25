@@ -1,0 +1,16 @@
+.cart_item {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0.5rem;
+  background-color: rgb(155, 155, 196);
+  border-radius: 2rem;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+.cart_img {
+  aspect-ratio: 1/1;
+  width: 10rem;
+  border-radius: 2rem;
+}

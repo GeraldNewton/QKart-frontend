@@ -1,0 +1,185 @@
+/* ! start of herocntainer */
+.herocontainer {
+  display: flex;
+  gap: 1rem;
+  margin: 0rem auto;
+  border: 0.5rem solid gold;
+  border-radius: 2rem;
+  width: 90%;
+  box-sizing: border-box;
+  margin-top: 8rem;
+  background: linear-gradient(to right, #e1eec3, #f05053);
+}
+.herotext {
+  width: fit-content;
+  color: rgb(236, 70, 70);
+  font-weight: 700;
+  font-size: 7rem;
+  font-weight: 600;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.herotext::before {
+  content: "Exciting deals ahead!!!";
+  color: darkblue;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  overflow: hidden;
+  width: 0%;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.5rem solid darkblue;
+  animation: special_text;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes special_text {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+.heroimage {
+  aspect-ratio: 2/1.5;
+  min-width: 30rem;
+}
+.herocontent {
+  overflow: hidden;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 2rem;
+}
+.hero_subtext1 {
+  color: rgb(127, 90, 41);
+  font-size: 3rem;
+  font-weight: 500;
+}
+.hero_subtext2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: darkblue;
+  text-decoration: dashed;
+}
+@media (max-width: 1700px) {
+  .herotext {
+    font-size: 5rem;
+  }
+  .hero_subtext1 {
+    font-size: 2.5rem;
+  }
+  .hero_subtext2 {
+    font-size: 3.8rem;
+  }
+}
+@media (max-width: 1100px) {
+  .herocontainer {
+    flex-direction: column;
+  }
+}
+.special {
+  color: darkgreen;
+  display: inline-block;
+  background-color: yellow;
+  border-radius: 1rem;
+  padding: 0rem 0.5rem;
+  animation: special_subtext;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes special_subtext {
+  0% {
+    transform: rotate(0deg);
+  }
+  33% {
+    transform: rotate(33deg);
+  }
+  66% {
+    transform: rotate(-33deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.clock_gif {
+  aspect-ratio: 1/1;
+  width: 20%;
+  min-width: 15rem;
+}
+/* ! end of herocntainer */
+
+.content {
+  width: 90%;
+  margin: 0rem auto;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.cart {
+  width: 100%;
+  max-width: 35rem;
+  min-height: 50rem;
+  background-color: rgb(192, 192, 245);
+  border-radius: 2rem;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  position: sticky;
+  top: 15rem;
+}
+
+.product_noitem {
+  width: 70%;
+  margin-bottom: 4rem;
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  color: rgb(107, 106, 106);
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: wheat;
+  text-align: center;
+  margin-right: 2rem;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+@media (max-width: 900px) {
+  .content {
+    display: block;
+  }
+  .cart {
+    margin: 4rem auto;
+  }
+  .product_noitem {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+.cart_noitem {
+  min-height: inherit;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  text-transform: capitalize;
+}

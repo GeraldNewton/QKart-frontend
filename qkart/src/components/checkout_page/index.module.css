@@ -1,0 +1,59 @@
+.cart {
+  width: 100%;
+  max-width: 35rem;
+  min-height: 50rem;
+  background-color: rgb(192, 192, 245);
+  border-radius: 2rem;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  position: sticky;
+  top: 15rem;
+}
+.info {
+  background-color: rgb(177, 177, 226);
+  padding: 2rem 4rem;
+  width: 70%;
+  color: white;
+  border-radius: 2rem;
+  padding-bottom: 5rem;
+}
+.add {
+  box-sizing: border-box;
+  background-color: #feddbf;
+  width: 100%;
+  border-radius: 1rem;
+  color: black;
+  box-shadow: 0 0 1rem 0.5rem white;
+  border: 0.2rem solid rgba(0, 0, 0, 0.28);
+  padding: 2rem 0rem;
+  padding-left: 1rem;
+}
+.amount {
+  padding: 0.3rem 0.5rem;
+  background-color: yellow;
+  color: red;
+  border-radius: 0.5rem;
+}
+.lowamount{
+  background-color: red;
+  color:white;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  animation: lowmoney;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-direction:alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes lowmoney{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+}

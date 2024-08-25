@@ -1,0 +1,17 @@
+.button{
+  outline: none;
+  background-color: transparent;
+  color: inherit;
+  border:none;
+  cursor: pointer;
+  font-size: 2rem;
+  color:white;
+
+  &:hover{
+    color: grey;
+  }
+
+  &:active{
+    color: black;
+  }
+}
