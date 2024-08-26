@@ -83,6 +83,7 @@ const UserPage = () => {
       localStorage.setItem("address", response);
     }
     setDialog(false);
+    set_newadd_view("none");
   };
 
   return (

@@ -182,6 +182,7 @@ const Signup = () => {
             justifyContent="space-between"
             alignItems="baseline"
             marginTop="2rem"
+            marginBottom="2rem"
           >
             <InputLabel
               htmlFor="re_password"
@@ -212,17 +213,16 @@ const Signup = () => {
             <Button
               type="submit"
               variant="contained"
-              sx={{ fontSize: "1.8rem", marginTop: "4rem" }}
+              sx={{ fontSize: "1.8rem", marginTop: "2rem" }}
             >
               submit
             </Button>
           ) : (
-            <CircularProgress />
+            <CircularProgress marginTop="2rem"/>
           )}
           <Typography
-            variant="h5"
+            variant="h4"
             margin="3rem auto 2rem auto"
-            className={styles.typography}
             color="purple"
           >
             Already have an account,{" "}

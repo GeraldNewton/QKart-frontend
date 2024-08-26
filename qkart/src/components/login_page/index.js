@@ -105,6 +105,7 @@ const Login = () => {
             justifyContent="space-between"
             alignItems="baseline"
             marginTop="2rem"
+            marginBottom="2rem"
           >
             <InputLabel
               htmlFor="password"
@@ -135,7 +136,7 @@ const Login = () => {
             <Button
               type="submit"
               variant="contained"
-              sx={{ fontSize: "1.8rem", marginTop: "4rem" }}
+              sx={{ fontSize: "1.8rem", marginTop: "2rem" }}
             >
               submit
             </Button>
@@ -143,9 +144,8 @@ const Login = () => {
             <CircularProgress />
           )}
           <Typography
-            variant="h5"
+            variant="h4"
             margin="3rem auto 2rem auto"
-            className={styles.typography}
             color="purple"
           >
             Don't have an account,{" "}

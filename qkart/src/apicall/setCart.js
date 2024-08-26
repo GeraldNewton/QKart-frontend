@@ -5,7 +5,6 @@ const setCart = async (productId, count) => {
   const email = localStorage.getItem("email");
   const token = localStorage.getItem("token");
 
-  console.log(email, productId, count);
   try {
     if (!token) {
       enqueueSnackbar(

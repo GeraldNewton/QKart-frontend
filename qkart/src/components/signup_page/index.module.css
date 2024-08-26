@@ -8,32 +8,32 @@
   background-color: white;
   border-radius: 2rem;
   border: 0.3rem solid rgba(128, 128, 128, 0.571);
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 10px 10px inset, rgba(50, 50, 93, 0.25) 0px 50px 110px -12px, rgba(0, 0, 0, 0.3) 0px 30px 70px -22px;}
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 10px 10px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 110px -12px,
+    rgba(0, 0, 0, 0.3) 0px 30px 70px -22px;
+}
 
-.typography{
-    color:grey
+.hero_img {
+  box-sizing: border-box;
+  min-width: 55rem;
+  max-width: 100rem;
+  width: 100%;
+  aspect-ratio: 1.5/1;
+  border: 0.5rem solid rgba(128, 128, 128, 0.571);
+  border-radius: 2rem;
+  margin: 0 auto;
 }
-.hero_img{
-    box-sizing: border-box;
-    min-width: 55rem;
-    max-width: 100rem;
-    width: 100%;
-    aspect-ratio: 1.5/1;
-    border: 0.5rem solid rgba(128, 128, 128, 0.571);
-    border-radius: 2rem;
-    margin:0 auto;
-}
-.login_link{
+.login_link {
   color: rgb(233, 146, 161);
-  cursor:pointer;
+  cursor: pointer;
   text-decoration: none;
   font-weight: 600;
 
-  &:hover{
+  &:hover {
     color: brown;
   }
 
-  &:active{
-    color:red
+  &:active {
+    color: red;
   }
 }
