@@ -1,5 +1,6 @@
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import { CLOUD_URL,BASE_URL } from "../App";
 
 const PlaceOrder = async (password) => {
   try {
@@ -15,7 +16,7 @@ const PlaceOrder = async (password) => {
       return;
     }
     const res = await axios.post(
-      `http://localhost:3000/v1/cart/buy`,
+      `${CLOUD_URL}/v1/cart/buy`,
       {
         email,
         password,

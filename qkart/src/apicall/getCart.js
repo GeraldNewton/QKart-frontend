@@ -1,5 +1,6 @@
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import { CLOUD_URL,BASE_URL } from "../App";
 
 const getCart = async () => {
   try {
@@ -14,7 +15,7 @@ const getCart = async () => {
       );
       return;
     }
-    const res = await axios.get(`http://localhost:3000/v1/cart`, {
+    const res = await axios.get(`${CLOUD_URL}/v1/cart`, {
       headers: { Authorization: `Bearer ${token}`, email },
     });
     return res.data.cart_items;

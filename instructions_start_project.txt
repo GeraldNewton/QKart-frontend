@@ -1,0 +1,5 @@
+for local Run:-
+use BASE_URL in place of CLOUD_URL in files of api call
+
+for deployment run:-
+use CLOUD_URL in place of BASE_URL in files of api call

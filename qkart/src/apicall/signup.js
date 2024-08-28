@@ -1,9 +1,10 @@
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import { CLOUD_URL,BASE_URL } from "../App";
 
 const signUp = async ({ username, password, email }) => {
   try {
-    const res = await axios.post("http://localhost:3000/v1/auth/signup", {
+    const res = await axios.post(`${CLOUD_URL}/v1/auth/signup`, {
       username,
       email,
       password,

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import { CLOUD_URL,BASE_URL } from "../App";
 
 const deleteOrders = async (id) => {
   try {
@@ -14,7 +15,7 @@ const deleteOrders = async (id) => {
       );
       return;
     }
-    const res = await axios.delete(`http://localhost:3000/v1/orders`, {
+    const res = await axios.delete(`${CLOUD_URL}/v1/orders`, {
       headers: { Authorization: `Bearer ${token}` },
       data: {
         email,

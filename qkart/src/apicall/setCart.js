@@ -1,5 +1,6 @@
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import { CLOUD_URL,BASE_URL } from "../App";
 
 const setCart = async (productId, count) => {
   const email = localStorage.getItem("email");
@@ -16,7 +17,7 @@ const setCart = async (productId, count) => {
       return;
     }
     const res = await axios.put(
-      `http://localhost:3000/v1/cart`,
+      `${CLOUD_URL}/v1/cart`,
       {
         productId,
         count,

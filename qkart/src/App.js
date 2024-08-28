@@ -14,6 +14,11 @@ import {
 import { styled } from "@mui/system";
 import "./App.css";
 
+
+// ! use BASE_URL for connecting to your local laptop and CLOUD_URL to conect with render
+export const BASE_URL="http://localhost:3000"
+export const CLOUD_URL="https://qkart-backend-iwws.onrender.com"
+
 const theme = createTheme({ 
   palette: {
     primary: {

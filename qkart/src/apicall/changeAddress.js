@@ -1,5 +1,7 @@
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import { BASE_URL, CLOUD_URL } from "../App";
+
 
 const changeAdd = async (newadd, pass) => {
   try {
@@ -17,7 +19,7 @@ const changeAdd = async (newadd, pass) => {
       return;
     }
     const res = await axios.put(
-      `http://localhost:3000/v1/users/setAdd/${id}`,
+      `${CLOUD_URL}/v1/users/setAdd/${id}`,
       {},
       {
         headers: { Authorization: `Bearer ${token}`, newadd, pass },

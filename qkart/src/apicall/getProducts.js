@@ -1,5 +1,6 @@
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import { CLOUD_URL,BASE_URL } from "../App";
 
 const getProducts = async (search_txt) => {
   try {
@@ -14,7 +15,7 @@ const getProducts = async (search_txt) => {
       return;
     }
     const res = await axios.get(
-      `http://localhost:3000/v1/products${search_txt ? `/${search_txt}` : ""}`,
+      `${CLOUD_URL}/v1/products${search_txt ? `/${search_txt}` : ""}`,
       {
         headers: { Authorization: `Bearer ${token}` },
       }
