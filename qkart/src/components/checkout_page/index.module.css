@@ -15,7 +15,7 @@
 .info {
   background-color: rgb(177, 177, 226);
   padding: 2rem 4rem;
-  width: 70%;
+  width: 100%;
   color: white;
   border-radius: 2rem;
   padding-bottom: 5rem;
@@ -23,6 +23,8 @@
 .add {
   box-sizing: border-box;
   background-color: #feddbf;
+  /* min-width: 50rem; */
+  /* max-width:100rem; */
   width: 100%;
   border-radius: 1rem;
   color: black;
@@ -41,7 +43,7 @@
   background-color: red;
   color:white;
   width: fit-content;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 1rem;
   animation: lowmoney;
   animation-timing-function: ease-in-out;

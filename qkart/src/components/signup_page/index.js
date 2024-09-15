@@ -51,7 +51,7 @@ const Signup = () => {
         localStorage.setItem("username", res.data.user.username);
         localStorage.setItem("address", res.data.user.address);
         localStorage.setItem("id", res.data.user._id);
-        localStorage.setItem("walletmoney", res.data.walletmoney);
+        localStorage.setItem("walletmoney", res.data.user.walletmoney);
         enqueueSnackbar("SignUp successfull", {
           variant: "success",
         });

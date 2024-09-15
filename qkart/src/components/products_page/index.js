@@ -190,6 +190,8 @@ const Products = () => {
           )}
           {/* end of setting of Carts card or no items present in cart box */}
         </Box>
+        
+        {/* end of setting of Carts card or no items present in cart box */}
       </Box>
       <Footer />
     </Box>

@@ -69,7 +69,7 @@ const CheckOut = () => {
       <Header hasAuthButtons />
       <Stack
         direction={{ md: "column", lg: "row" }}
-        gap="3rem"
+        gap="10rem"
         margin="10rem auto"
         width="90%"
         justifyContent="space-between"
@@ -91,11 +91,12 @@ const CheckOut = () => {
           </Typography>
           {address ? (
             <>
-              <Stack alignItems="flex-end" margin="5rem 0rem 7rem 0rem">
+              <Stack  margin="5rem 0rem 7rem 0rem">
                 <Typography
                   className={checkout.add}
                   fontSize="2.4rem"
                   fullWidth
+                  alignSelf="flex-start"
                 >
                   {localStorage.getItem("address")}
                 </Typography>
@@ -108,6 +109,7 @@ const CheckOut = () => {
                     marginTop: "4rem",
                     fontWeight: "600",
                     fontSize: "1.5rem",
+                    alignSelf:"flex-end",
                     "&:hover": {
                       backgroundColor: "error.dark",
                       color: "support",
@@ -192,6 +194,7 @@ const CheckOut = () => {
                 height="20rem"
                 fontSize="4rem"
                 fontWeight="600"
+                padding="0 2rem"
               >
                 SET AN ADDRESS BEFORE PLACING AN ORDER
               </Box>

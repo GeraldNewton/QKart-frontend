@@ -120,7 +120,7 @@ const UserPage = () => {
               backgroundColor: "antiquewhite",
             }}
           />
-          <Stack direction="column" width="75%">
+          <Stack direction="column" width="100%">
             <Stack direction="row" justifyContent="space-between" gap="2rem">
               <Typography variant="h4" fontWeight="600" width="16rem">
                 username:
@@ -420,6 +420,7 @@ const UserPage = () => {
                         color: "white",
                         backgroundColor: "error.dark",
                       },
+                      marginLeft:"2rem"
                     }}
                     onClick={() => handleDelete(obj._id)}
                   >
@@ -439,6 +440,7 @@ const UserPage = () => {
               fontSize="4rem"
               backgroundColor="secondary.light"
               color="error.main"
+              padding="0 2rem"
             >
               You Do Not Have Any Orders Made...
             </Box>
