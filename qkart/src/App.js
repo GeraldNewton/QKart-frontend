@@ -49,15 +49,15 @@ const StyledMaterialDesignContent = styled(MaterialDesignContent)(() => ({
 const route = createBrowserRouter([
   {
     path: "/",
+    element: <Products />,
+  },
+  {
+    path: "/login",
     element: <Login />,
   },
   {
     path: "/signup",
     element: <Signup />,
-  },
-  {
-    path: "/products",
-    element: <Products />,
   },
   {
     path: "/checkout",

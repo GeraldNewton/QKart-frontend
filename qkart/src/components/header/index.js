@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 
 const Header = ({ hasAuthButtons,no_user }) => {
   let child = null;
-  if (hasAuthButtons) {
-    const username = localStorage.getItem("username");
+  const username = localStorage.getItem("username");
+  if(username){
     child = (
       <div className={styles.authbtn}>
         {!no_user && <Link to="../userPage" className={styles.link}>
@@ -21,9 +21,16 @@ const Header = ({ hasAuthButtons,no_user }) => {
           />
           <span>{username}</span>
         </Link>}
-        <Link to="../" onClick={()=>localStorage.clear()} className={styles.link}>LogOut</Link>
+        <Link to="/" onClick={()=>localStorage.clear()} className={styles.link}>LogOut</Link>
       </div>
     );
+  }
+  else{
+    child=(
+      <div className={styles.authbtn}>
+        {hasAuthButtons ? (<Link to="/login" className={styles.link}>Login</Link>) : (null)}
+      </div>
+    )
   }
 
   return (

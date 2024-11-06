@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import styles from "./index.module.css";
 import Header from "../header";
 import hero from "../../assests/hero.png";
@@ -25,6 +26,8 @@ const Products = () => {
   // ! contains search text
   const [search_txt, set_search_txt] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
 
   // ! implementing debounce search
   useEffect(() => {
@@ -47,7 +50,7 @@ const Products = () => {
     };
     products();
     cart();
-  }, []);
+  }, [location.key]);
 
   const getSearchProducts = async (search_txt) => {
     const pro = await getProducts(search_txt);
@@ -55,19 +58,29 @@ const Products = () => {
   };
 
   const handleOrder = () => {
+    const token=localStorage.getItem("token")
+    if(token)
     navigate("../checkout");
+    else{
+      enqueueSnackbar(
+          "Cannot buy without Login",
+          {
+            variant: "warning",
+          }
+        );
+    }
   };
 
   const handleAddToCart = async (prod, qty) => {
     let new_cart = null;
     if (qty || qty == 0) {
       if (qty == 0) {
-        new_cart = await setCart(prod._id, 0);
+        new_cart = await setCart(prod, 0);
       } else {
-        new_cart = await setCart(prod._id, qty);
+        new_cart = await setCart(prod, qty);
       }
     } else if (cart_arr.findIndex((val) => val.product._id == prod._id) == -1) {
-      new_cart = await setCart(prod._id, 1);
+      new_cart = await setCart(prod, 1);
     } else {
       enqueueSnackbar("Product already present in cart", {
         variant: "warning",
@@ -155,7 +168,7 @@ const Products = () => {
         )}
         {/* end of setting of product cards or no items found box if no matches for search text found */}
 
-        {/* start of setting of Carts card or no items present in cart box */}
+        {/* start of setting of Cart's card or no items present in cart box */}
 
         <Box className={styles.cart}>
           {cart_arr.length ? (
@@ -188,7 +201,7 @@ const Products = () => {
           ) : (
             <Box className={styles.cart_noitem}>no items in cart ☹️</Box>
           )}
-          {/* end of setting of Carts card or no items present in cart box */}
+          {/* end of setting of Cart's card or no items present in cart box */}
         </Box>
         
         {/* end of setting of Carts card or no items present in cart box */}

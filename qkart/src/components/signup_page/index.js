@@ -55,7 +55,7 @@ const Signup = () => {
         enqueueSnackbar("SignUp successfull", {
           variant: "success",
         });
-        navigate("/products");
+        navigate("/");
       }
     }
     setLoad(false);

@@ -7,13 +7,9 @@ const getCart = async () => {
     const email = localStorage.getItem("email");
     const token = localStorage.getItem("token");
     if (!token) {
-      enqueueSnackbar(
-        "Cannot get Cart items due to faulty Login, You can Login again to remove this error",
-        {
-          variant: "error",
-        }
-      );
-      return;
+      let cart=localStorage.getItem("cart_items");
+      cart=JSON.parse(cart);
+      return cart || [];
     }
     const res = await axios.get(`${CLOUD_URL}/v1/cart`, {
       headers: { Authorization: `Bearer ${token}`, email },

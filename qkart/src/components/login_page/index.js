@@ -1,4 +1,3 @@
-// import "./index.css"
 import Header from "../header";
 import {
   Box,
@@ -34,6 +33,7 @@ const Login = () => {
     };
     const res = await login(signup_obj);
     if (res && res.data.token && res.data.user) {
+      localStorage.clear();
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("email", res.data.user.email);
       localStorage.setItem("username", res.data.user.username);
@@ -43,7 +43,7 @@ const Login = () => {
       enqueueSnackbar("Login successfull", {
         variant: "success",
       });
-      navigate("/products")
+      navigate("/")
     }
     setLoad(false);
   };
@@ -149,7 +149,7 @@ const Login = () => {
             color="purple"
           >
             Don't have an account,{" "}
-            <Link to="signup" className={styles.login_link}>
+            <Link to="/signup" className={styles.login_link}>
               Sign Up
             </Link>{" "}
             to Create an Account!

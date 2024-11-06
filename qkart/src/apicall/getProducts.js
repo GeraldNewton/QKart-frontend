@@ -4,22 +4,7 @@ import { CLOUD_URL,BASE_URL } from "../App";
 
 const getProducts = async (search_txt) => {
   try {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      enqueueSnackbar(
-        "Cannot get Products due to faulty Login, You can Login again to remove this error",
-        {
-          variant: "error",
-        }
-      );
-      return;
-    }
-    const res = await axios.get(
-      `${CLOUD_URL}/v1/products${search_txt ? `/${search_txt}` : ""}`,
-      {
-        headers: { Authorization: `Bearer ${token}` },
-      }
-    );
+    const res = await axios.get(`${CLOUD_URL}/v1/products${search_txt ? `/${search_txt}` : ""}`);
     return res.data;
   } catch (e) {
     console.log(e);

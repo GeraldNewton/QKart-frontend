@@ -17,7 +17,7 @@ const ProductCard = ({ prod, handleAddToCart }) => {
       <Card sx={{ minWidth: 300 }}>
         <CardMedia
           component="img"
-          alt="green iguana"
+          alt={prod.name}
           height="200"
           image={prod.image}
         />
